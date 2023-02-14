@@ -1,0 +1,533 @@
+/* https://www.joshwcomeau.com/css/custom-css-reset/
+Used a style reset below */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* My styles below */
+
+
+:root {
+    --clr-primary: #97e0e6;
+    --clr-neutral-800: #0c0c0c;
+    --clr-neutral-600: #bebebe;
+    --clr-neutral-400: #dddddd;
+    --clr-neutral-200: #efefef;
+
+    --fw-base: 400;
+    --fw-secondary: 200;
+}
+
+header {
+    background-color: #97e0e6;
+    font-family: sans-serif;
+    height: 250px;
+    max-height: 200px;
+    padding: 1rem;
+    padding-bottom: 1rem;
+}
+/* Container for Logo, heading, and Nav bar */
+.navigation {
+    padding: 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100%
+}
+
+.logo {
+    background-color: transparent;
+    padding: 1rem;
+    height: 100%;
+    justify-self: start;
+}
+.logo img {
+    max-height: 200px;
+    max-width: 150px;
+}
+
+/* Div containing the nav */
+.nav-container {
+    display: flex;
+    text-align: right;
+    font-size: 1.125rem;
+    background-color: transparent;
+    padding-bottom: 5.5rem;
+}
+
+/* URL Styling for Nav Bar */
+.nav-container a{
+    font-family: 'Mukta', sans-serif;
+    color: black;
+    text-decoration: none;   
+}
+
+.nav-container a:link {
+    color: var(--clr-neutral-800)
+}
+
+.nav-container a:visited {
+    color: var(--clr-neutral-800)
+}
+
+.nav-container a:focus {
+    border-bottom: 1px solid;
+    background: var(--clr-neutral-600)
+}
+
+.nav-container a:hover {
+    border-bottom: 1px solid;
+    background: var(--clr-neutral-600);
+    border-radius: 3px;
+}
+
+.nav-container a:active {
+    background: var(--clr-neutral-400);
+    color: var(--clr-neutral-600);
+}
+
+/* container for Headings at top of page
+contained inside 'navigation' */
+.headings {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+}
+
+body {
+    background-color: var(--clr-neutral-200);
+
+}
+
+footer {
+    height: 150px;
+    max-height: 250px;
+    background-color: #97e0e6;
+    font-family: 'Mukta', sans-serif;
+    padding: 1rem;
+}
+
+.footer-navigation nav{
+    text-align: right;
+    padding: 1rem;
+    font-family: 'Mukta', sans-serif;
+}
+/* Div to contain info about site creator, socials etc. */
+.copyright{
+    padding-left: 1rem;
+}
+.copyright p{
+    color: var(--clr-neutral-600)
+}
+.copyright p:nth-of-type(2){
+    color: var(--clr-neutral-800)
+}
+
+/* Main section -- NEEDS FONT UPDATE!*/
+main {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 1rem;
+    background-color: var(--clr-neutral-600);
+    color: var(--clr-neutral-800);
+    overflow: hidden;
+}
+
+/* Grid for Index page */
+.maingrid {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    column-gap: 1rem;
+    row-gap:1rem;
+}
+
+.left-col-image{
+    grid-row:1;
+    grid-column: 1;
+    width: 1fr;
+    height: 1fr;
+    background-color: transparent;
+    text-align: center;
+}
+.left-col-image img{
+    width: 450px;
+    height: 400px;
+    object-fit: fill;
+    border: 2px solid aliceblue;
+
+}
+
+.right-col-text {
+    grid-row: 1;
+    grid-column: 2; 
+    background-color: var(--clr-neutral-400);
+    border: 2px solid aliceblue;
+    padding: 2rem;
+}
+.left-col-text {
+    grid-row: 2;
+    grid-column: 1;
+    background-color: var(--clr-neutral-400);
+    border: 2px solid aliceblue;
+    padding: 2rem;
+    text-align: center;
+    max-width: 450px;
+}
+
+.right-col-image{
+    grid-row:2;
+    grid-column: 2;
+    background-color: transparent;
+}
+
+.right-col-image img{
+    object-fit: fill;
+    border: 2px solid aliceblue;   
+}
+
+/*big catchy title*/
+.catchy{
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+ul {
+    font-size: 1.2rem;
+}
+
+
+/*Styles for AboutMe page below here*/
+.flex1{
+    flex:1;
+}
+.flex2{
+    flex:2;
+}
+.aboutmecontainer{
+    width: 80%;
+    height: auto;
+    background-color: transparent;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.canada-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    background-color: transparent; 
+}
+
+.ocanada-image-container{
+    background-color: transparent;
+    margin-right: 1rem;
+}
+
+.ocanada-image-container:nth-of-type(2){
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+.ocanada-image-container img{
+    object-fit: fill;
+    border: 2px solid aliceblue;   
+}
+
+.ocanada-text-container {
+    background-color: var(--clr-neutral-400);
+    border: 2px solid aliceblue;
+    font-size: 1em;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.linebreak {
+    width: 60%;
+    text-align: center;
+    border: 1px solid grey;
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/*Where I am styles below*/
+
+.sunpeaks-container {
+    width: 80%;
+    margin-left: 10%;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    height: auto;
+    background-color: transparent;
+
+}
+
+.map-container{
+    width: 1fr;
+    height: auto;
+    background-color: transparent;
+    grid-column: 1;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-right: 0;
+    max-height: 450px;
+    max-width: 500px;
+}
+.map-container img{
+    object-fit: fill;
+    border: 2px solid aliceblue;   
+
+}
+.table-container{
+    grid-column: 2;
+    width: 1fr;
+    background-color: transparent;
+    padding: 2rem;
+    
+}
+.table-container table{
+    font-size:1rem;
+    text-align: center;
+    align-items: start;
+    border-collapse: collapse;
+}
+
+.tablecell {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.light{
+    background-color: var(--clr-neutral-400);
+}
+.tableheader{
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Contact page styles below */
+
+/*Background*/
+.background {
+    background-image: url("Images/background.jpg");
+    background-size: cover;
+}
+
+.form-container{
+    max-width: 607px;
+    width: 60%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--clr-neutral-600);
+    border: 2px solid var(--clr-neutral-200);
+    padding: 2rem;
+    display: block;
+}
+
+.form {
+    display: block;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+/*The name email part*/
+#details{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#details label{
+    margin-left: 5px;
+}
+
+.input-box:nth-of-type(1) {
+    margin-right: 2rem;
+}
+
+.wrapper{
+    display: block;
+    width: 80%;
+    padding-top: 10px;
+}
+.radio {
+    display: block;
+    padding-right:5px;
+    float: left;
+    width:80%;
+}
+.wrapper p {
+    margin-left: 5px;
+}
+.wrapper input {
+    margin-right:7px;
+}
+
+.textbox-wrapper{
+    width: 80%;
+    margin-top: 1rem;
+    margin-left:10%;
+
+}
+
+.textbox-wrapper textarea {
+    max-width: 98%;
+    width:98%;
+    margin-left: 1%;
+    border: 1px dashed var(--clr-neutral-600);
+}
+
+.form button {
+    width:80%;
+    margin-left: 10%;
+    margin-top: 1rem;
+    text-align: center;
+    border: 2px solid var(--clr-neutral-600);
+    border-radius: 2px;
+    background-color: #97e0e6;
+}
+
+/*Gear page*/
+
+.gear-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gear-container button {
+    border: 2px solid --clr-neutral-400;
+    background-color: green;
+}
+
+.gear-card {
+    padding: 5px;
+    margin: 10px;
+    background-color: transparent;
+    height: 500px;
+    max-height: 550px;
+}
+
+.gear-card img {
+    text-align: center;
+    width:100%;
+    max-height:250px;
+    height:auto;
+    object-fit:fill;
+    object-position:50% 50%;
+}
+
+.gear-card textarea {
+    width: 100%;
+    height: 4em;
+    resize: none;
+}
+
+#heart, #saveForLater {
+    margin-left: 10px;
+}
+
+
+
+
+
+
+/*change font size on index.html*/
+@media only screen and (max-width: 1000px) {
+    .left-col-text ul {
+        font-size: 0.8rem;
+    }
+    .right-col-text {
+        font-size: 0.8rem;
+    }
+    .catchy {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .left-col-text {
+        font-size: 0.6rem;
+        padding-left: 0.5rem;
+    }
+    .right-col-text {
+        font-size: 0.6rem;
+    }
+    .catchy {
+        font-size: 0.8rem;
+    }
+}

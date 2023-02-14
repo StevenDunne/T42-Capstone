@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+                <!--GoogleFonts-->
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet"> 
+        <title>Steven Dunne - Ski Instructor</title>
+    </head>
+    <body>
+    <header>
+        <div class="navigation">
+            <div class="logo">                
+                <a href="https://www.snowpro.com/en/">
+                <img src="Images/csia_logo.png" alt="CSIA logo">
+                </a>
+            </div>
+            <div class="headings">
+                <h1>Contact</h1>
+                <h3>Here for anything you need</h3>
+            </div>
+            <div class="nav-container">
+                <nav id="nav">
+                    <a href="index.html">Home</a>
+                    <a href="aboutme.html">About me</a>
+                    <a href="location.html">Location</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="gear.html">Gear</a>
+                    <a href="saveforlater.html">Saved for Later</a>   
+                </nav>
+            </div>
+        </div>
+    </header>
+        <main class="background"> 
+            <div class="form-container">
+                <p class="catchy">Lets have a chat!</p><br>
+                <p>Drop your details to me below and a little bit about your enquiry and I'll get
+                    back to you as soon as possible.
+                </p><br>
+                <form class="form">
+                    <fieldset id="details">
+                    <legend>Your details</legend>
+                    <label>Name:<br><input  class="input-box" type="text" id="name" name="name"></label>
+                    
+                    <label>Email:<br><input class="input-box" type="email" id="email" name="email"></label>
+                    <div class="wrapper">    
+                        <p>What type of skiier are you?</p>                       
+                        <label class="radio"><input type="radio" id="novice" name="radio" value="novice">Novice</label>                       
+                        <label class="radio"><input type="radio" id="intermediate" name="radio" value="intermediate">Intermediate</label>
+                        <label class="radio"><input type="radio" id="advanced" name="radio" value="advanced">Advanced</label>
+                    </div>
+                </fieldset>
+                <div class="textbox-wrapper">
+                    <label for="textarea">How can I help you?
+                    <textarea id="textarea" name="textarea" rows="7"></textarea>
+                    </label>
+                </div>
+                <button type="submit">Submit!</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <!--Nav bar and social links here?-->
+            <div class="footer-navigation">
+                <nav>
+                    <a href="#nav">Back to Top</a>
+                </nav>
+                <div class="copyright">
+                    <p>Created by</p> <p>Dangerous Dudes Productions</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
